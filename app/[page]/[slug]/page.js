@@ -64,7 +64,7 @@ export default async function DynamicPost({ params }) {
     : data.date
 
   return (
-    <div className="w-full bg-white dark:bg-slate-950">
+    <div className="w-full ">
       <Link
         href={`/${page}`}
         className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white mb-8 group transition-colors"

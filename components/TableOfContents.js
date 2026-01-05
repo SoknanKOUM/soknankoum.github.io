@@ -71,7 +71,7 @@ export default function TableOfContents({ content }) {
   return (
     <aside className="hidden xl:block">
       <div className="sticky top-24 space-y-4">
-        <div className="flex items-center gap-2 text-sm font-semibold text-gray-900 uppercase tracking-wide">
+        <div className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wide">
           <List className="h-4 w-4" />
           <span>On This Page</span>
         </div>
@@ -85,8 +85,8 @@ export default function TableOfContents({ content }) {
                 heading.level === 3 ? 'pl-4' : ''
               } ${
                 activeId === heading.id
-                  ? 'text-gray-900 font-medium border-l-2 border-gray-900 pl-3'
-                  : 'text-gray-600 hover:text-gray-900 border-l-2 border-transparent pl-3 hover:border-gray-300'
+                  ? 'text-gray-900 dark:text-white font-medium border-l-2 border-gray-900 dark:border-white pl-3'
+                  : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-l-2 border-transparent pl-3 hover:border-gray-300 dark:hover:border-slate-600'
               }`}
             >
               {heading.text}

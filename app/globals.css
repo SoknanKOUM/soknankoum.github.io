@@ -2,35 +2,44 @@
 
 @layer theme {
   :root {
-    --color-slate-950: #020617;
+    --color-slate-950: #000000;
+    --color-black: #000000;
   }
 }
 
-@variant dark (.dark &);
+/* Tailwind CSS v4 Dark Mode - Custom variant using class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
 
-html {
-  background-color: #ffffff;
+* {
+  border-color: theme('colors.gray.200');
+}
+
+.dark * {
+  border-color: theme('colors.slate.700');
+}
+
+html,
+body {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
-html.dark {
-  background-color: #020617;
-}
-
+/* Light mode colors */
+html,
 body {
   background-color: #ffffff;
   color: #171717;
+}
+
+/* Dark mode colors - force override */
+html.dark,
+html.dark body {
+  background-color: #000000 !important;
+  color: #f1f5f9 !important;
+}
+
+body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-}
-
-body.dark {
-  background-color: #020617;
-  color: #f1f5f9;
-}
-
-/* Global dark mode - inherit from body */
-.dark * {
-  border-color: inherit;
 }
 
 .prose {

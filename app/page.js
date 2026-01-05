@@ -12,11 +12,11 @@ export default function Home() {
   }))
 
   return (
-    <div className="w-full bg-white dark:bg-slate-950">
-      <div className="grid lg:grid-cols-[320px_1fr] gap-12 py-8 bg-white dark:bg-slate-950">
+    <div className="w-full">
+      <div className="grid lg:grid-cols-[320px_1fr] gap-12 py-8">
 
         {/* LEFT SIDEBAR */}
-        <aside className="space-y-6 bg-white dark:bg-slate-950">
+        <aside className="space-y-6">
           {/* Profile Section */}
           <div className="space-y-3">
             <div className="w-28 h-28 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 border border-slate-300 dark:border-slate-600 overflow-hidden">
@@ -134,7 +134,7 @@ export default function Home() {
         </aside>
 
         {/* RIGHT CONTENT AREA */}
-        <main className="space-y-12 bg-white dark:bg-slate-950">
+        <main className="space-y-12">
 
           {/* About Section */}
           <section className="space-y-4">

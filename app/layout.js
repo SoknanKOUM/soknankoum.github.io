@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "katex/dist/katex.min.css";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ThemeProvider from "../components/ThemeProvider";
+import SearchWrapper from "../components/SearchWrapper";
 import siteConfig from "../site.config";
 import { getAllContent } from "../lib/getAllContent";
 
@@ -81,15 +82,20 @@ export default function RootLayout({ children }) {
   const allContent = getAllContent()
 
   return (
-    <html lang="en" className="bg-white">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen transition-colors`}
       >
-        <Header allContent={allContent} />
-        <main className="mx-auto max-w-6xl px-6 py-8 flex-1 w-full">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <SearchWrapper allContent={allContent}>
+            <main className="flex-1 w-full">
+              <div className="mx-auto max-w-6xl px-6 py-8">
+                {children}
+              </div>
+            </main>
+            <Footer />
+          </SearchWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );

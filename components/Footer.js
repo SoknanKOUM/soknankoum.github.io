@@ -3,7 +3,7 @@ import siteConfig from '../site.config'
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-white dark:bg-slate-950 dark:border-slate-800 mt-auto transition-colors">
+    <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-black mt-auto transition-colors">
       <div className="mx-auto max-w-4xl px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500 dark:text-slate-400">

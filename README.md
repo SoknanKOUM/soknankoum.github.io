@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-Static website for portfolio, blog, and CV.
+Static website for portfolio, blog, and CV with **dark mode support**! 🌙
 
 ## Quick Start
 
@@ -8,6 +8,16 @@ Static website for portfolio, blog, and CV.
 npm install
 npm run dev
 ```
+
+## Features
+
+✨ **Content-driven** - All pages generated from markdown files
+🌓 **Dark Mode** - Automatic theme switching with system preference
+🔍 **Built-in Search** - Search across all content with keyboard shortcuts
+📱 **Responsive** - Mobile-first design with beautiful UI
+⚡ **Fast** - Static site generation with Next.js 15
+🎨 **Customizable** - Easy configuration through `site.config.js`
+♿ **Accessible** - SEO-friendly with proper semantic HTML
 
 ## How to Use
 
@@ -148,6 +158,34 @@ Browse all available icons at [lucide.dev/icons](https://lucide.dev/icons). Use 
 - Icons are optional - you can mix items with and without icons
 - Icons work on both desktop and mobile navigation
 - Invalid icon names will be ignored (no error shown)
+
+### Dark Mode
+
+Your site automatically supports dark mode with **three themes**: Light, Dark, and System (follows device preference).
+
+**How It Works:**
+
+- 🌙 Click the **moon/sun icon** in the header to toggle themes
+- 🖥️ **System theme** (default) - follows your device's color scheme
+- 💾 **Theme preference** is saved in browser localStorage
+- 🎨 **All components** automatically adapt to the selected theme
+
+**Implementation Details:**
+
+Built using **Tailwind CSS v4** with `next-themes`:
+- Custom `@custom-variant dark` in globals.css
+- Class-based dark mode strategy
+- No FOUC (Flash of Unstyled Content) with `suppressHydrationWarning`
+- Smooth transitions between themes
+
+**Customizing Dark Mode:**
+
+All dark mode colors are defined using Tailwind's `dark:` variant:
+```jsx
+className="bg-white dark:bg-slate-950 text-gray-900 dark:text-white"
+```
+
+To customize colors, edit the CSS classes in component files or update `globals.css` theme variables.
 
 ### Search Functionality
 

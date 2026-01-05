@@ -27,14 +27,11 @@ module.exports = {
   profileImage: "/images/profile.png",
 
   // Current role and affiliation
-  role: "PhD Student",
-  affiliation: "Standford University",
-
-  // Short bio for hero section
-  tagline: "Researcher, Developer & Open Source Enthusiast",
+  role: "Your Student Position",
+  affiliation: "Your University",
 
   // Longer introduction for about section (supports markdown)
-  introduction: `I'm a passionate chonky cat researcher and developer with a deep interest in advancing the field of machine learning and artificial intelligence. My work focuses on exploring the mathematical foundations of large language models and building accessible web technologies.`,
+  introduction: `Your Introduction`,
 
   // Research interests or topics
   // You can use a string for plain text, or an object with { name, icon } to add lucide-react icon names
@@ -51,8 +48,6 @@ module.exports = {
     { title: "Home", path: "/", icon: "Home" },
     { title: "CV", path: "/cv", icon: "FileText" },
     { title: "Blog", path: "/blog", icon: "BookOpen" },
-    { title: "Projects", path: "/projects", icon: "Code" },
-    { title: "Publications", path: "/publications", icon: "GraduationCap" }
   ],
 
   // Social links for footer
@@ -88,16 +83,6 @@ module.exports = {
       itemsPerPage: 6,       // For grid/list mode pagination
       columns: 4            // For grid mode: 1, 2, 3, or 4 columns
     },
-    projects: {
-      mode: "grid",          // "simple" | "grid" | "list"
-      itemsPerPage: 12,      // For grid/list mode pagination
-      columns: 2             // For grid mode: 1, 2, 3, or 4 columns
-    },
-    publications: {
-      mode: "grid",          // "simple" | "grid" | "list"
-      itemsPerPage: 9,       // For grid/list mode pagination
-      columns: 2             // For grid mode: 1, 2, 3, or 4 columns
-    }
     // Add more pages here as needed:
     // pagename: { mode: "grid", itemsPerPage: 9, columns: 3 }
   },
@@ -113,23 +98,6 @@ module.exports = {
       showViewAll: true,     // Show "View All" button
       viewAllText: "View All Posts",
       viewAllLink: "/blog"
-    },
-    {
-      type: "projects",
-      title: "Featured Projects",
-      count: 1,
-      showViewAll: true,
-      viewAllText: "View All Projects",
-      viewAllLink: "/projects"
-    },
-    // Add more sections as needed:
-    {
-      type: "publications",
-      title: "Recent Publications",
-      count: 3,
-      showViewAll: true,
-      viewAllText: "View All Publications",
-      viewAllLink: "/publications"
     }
   ]
 }

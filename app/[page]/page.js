@@ -46,7 +46,7 @@ export default async function DynamicPageRoute({ params }) {
     const { data, content } = matter(fileContents)
 
     return (
-      <div className="w-full bg-white dark:bg-slate-950">
+      <div className="w-full ">
         <div className="space-y-10 py-4">
           <header className="space-y-4">
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
