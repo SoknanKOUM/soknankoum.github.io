@@ -169,8 +169,8 @@ body {
 }
 
 .dark .prose pre {
-  background: #0f172a;
-  border-color: #1e293b;
+  background: #1e293b;
+  border-color: #334155;
 }
 
 .prose pre code {
@@ -342,7 +342,7 @@ body {
 }
 
 .dark .prose tbody {
-  background: #0f172a;
+  background: #1e293b;
 }
 
 .prose td {

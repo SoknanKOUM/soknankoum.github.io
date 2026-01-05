@@ -11,6 +11,13 @@ export default function Home() {
     items: getPageItems(section.type).slice(0, section.count)
   }))
 
+  // Backwards compatibility: support both old 'introduction' and new 'aboutSection' config
+  const aboutConfig = siteConfig.aboutSection || {
+    show: true,
+    title: "About",
+    content: siteConfig.introduction || "Your Introduction"
+  }
+
   return (
     <div className="w-full">
       <div className="grid lg:grid-cols-[320px_1fr] gap-12">
@@ -137,16 +144,18 @@ export default function Home() {
         <main className="space-y-12">
 
           {/* About Section */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">About</h2>
-            <div className="prose prose-lg max-w-none">
-              {siteConfig.introduction.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-700 dark:text-slate-300 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </section>
+          {aboutConfig.show && (
+            <section className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{aboutConfig.title}</h2>
+              <div className="prose prose-lg max-w-none">
+                {aboutConfig.content.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 dark:text-slate-300 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Dynamic Content Sections */}
           {homeSections.map((section, sectionIndex) => (

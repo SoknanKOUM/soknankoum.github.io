@@ -30,8 +30,12 @@ module.exports = {
   role: "Your Student Position",
   affiliation: "Your University",
 
-  // Longer introduction for about section (supports markdown)
-  introduction: `Your Introduction`,
+  // About section configuration
+  aboutSection: {
+    show: true,                      // Set to false to hide the About section
+    title: "Hello, I'm a Cool Cat 😼",                  // Customize the section heading (e.g., "Bonjour", "Hello", "Introduction")
+    content: `Your Introduction into Meow`     // Your introduction text (supports line breaks with \n\n)
+  },
 
   // Research interests or topics
   // You can use a string for plain text, or an object with { name, icon } to add lucide-react icon names
