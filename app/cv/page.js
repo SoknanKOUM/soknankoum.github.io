@@ -4,6 +4,7 @@ import CVButtons from '../../components/CVButtons'
 import siteConfig from '../../site.config'
 import Image from 'next/image'
 
+
 export async function generateMetadata() {
   return {
     title: 'CV',
