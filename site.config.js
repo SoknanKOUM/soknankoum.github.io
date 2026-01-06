@@ -37,6 +37,16 @@ module.exports = {
     content: `Your Introduction into Meow`     // Your introduction text (supports line breaks with \n\n)
   },
 
+  // Contact section configuration
+  contactSection: {
+    show: true,  // Set to false to hide the entire Contact section on home page
+    title: "Contact",  // Customize the section heading
+    showEmail: true,  // Set to false to hide email
+    showGithub: true,  // Set to false to hide GitHub
+    showLinkedin: true,  // Set to false to hide LinkedIn
+    showTwitter: true,  // Set to false to hide Twitter
+  },
+
   // Research interests or topics
   // You can use a string for plain text, or an object with { name, icon } to add lucide-react icon names
   interests: [
