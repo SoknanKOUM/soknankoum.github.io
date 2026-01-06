@@ -47,6 +47,40 @@ module.exports = {
     showTwitter: true,  // Set to false to hide Twitter
   },
 
+  // Profile section configuration (home page sidebar)
+  profileSection: {
+    show: true,  // Set to false to hide entire profile sidebar
+    showImage: true,  // Set to false to hide profile image
+    showName: true,  // Set to false to hide name
+    showRole: true,  // Set to false to hide role
+    showAffiliation: true,  // Set to false to hide affiliation
+    showInterests: true,  // Set to false to hide interests section
+    imageShape: "circle",  // Shape options:
+                            // "rounded" - Rounded corners (default)
+                            // "square" - Sharp corners
+                            // "circle" - Full circle
+                            // "blob" - Organic blob shape
+                            // "hexagon" - Hexagonal shape
+                            // "diamond" - Diamond/rotated square
+                            // "squircle" - Apple-style squircle
+    imageSize: "large"  // "small" (64px), "medium" (80px), "large" (112px)
+  },
+
+  // Layout configuration
+  layout: {
+    sidebarPosition: "left",  // "left" or "right"
+    contentWidth: "6xl",  // "4xl", "5xl", "6xl", "7xl" - max width of content
+    showSidebar: true  // Set to false to hide sidebar completely (full-width layout)
+  },
+
+  // Footer configuration
+  footer: {
+    show: true,  // Set to false to hide footer
+    text: null,  // Custom footer text (null uses default: "© 2024 Your Name")
+    showSocialLinks: true,  // Set to false to hide social icons in footer
+    customLinks: []  // Add custom links: [{ text: "Privacy", url: "/privacy" }]
+  },
+
   // Research interests or topics
   // You can use a string for plain text, or an object with { name, icon } to add lucide-react icon names
   interests: [
@@ -84,6 +118,12 @@ module.exports = {
   // Option 3: Leave as null to render from content/cv.md (markdown)
   // The markdown option provides the best SEO and accessibility
   cvFile: "/cv/cv.png",
+
+  // CV Page Configuration
+  cvConfig: {
+    showDownloadButton: false,  // Set to false to hide the download button
+    showPrintButton: false,     // Set to false to hide the print button
+  },
 
   // Page Display Configuration
   // Configure how each page should display content

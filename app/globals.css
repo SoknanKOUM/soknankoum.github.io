@@ -529,10 +529,21 @@ body {
 
 /* Print optimizations for CV */
 @media print {
+  /* Hide all non-essential elements */
+  header, nav, footer, .print\\:hidden {
+    display: none !important;
+  }
+
+  /* Markdown CV content */
   .cv-content {
     max-width: 100%;
     font-size: 10pt;
     line-height: 1.4;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    margin: 0 !important;
   }
 
   .cv-content h2 {
@@ -552,5 +563,41 @@ body {
 
   .cv-content section {
     page-break-inside: avoid;
+  }
+
+  /* Image CV display */
+  .cv-image-container {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .cv-image-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* PDF iframe container */
+  .cv-pdf-container {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure page breaks nicely */
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
+  /* Remove dark mode colors for print */
+  html, body, * {
+    background: white !important;
+    color: black !important;
   }
 }

@@ -52,7 +52,19 @@ export default function CVPage() {
             Curriculum Vitae
           </div>
           <div className="flex items-start justify-between gap-4 flex-wrap">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white tracking-tight print:text-4xl">CV</h1>
+            <div className="space-y-2">
+              <h1 className="text-5xl font-bold text-gray-900 dark:text-white tracking-tight print:text-4xl">
+                {siteConfig.name}
+              </h1>
+              <div className="space-y-1">
+                <p className="text-lg font-medium text-gray-700 dark:text-slate-300">
+                  {siteConfig.role}
+                </p>
+                <p className="text-base text-gray-600 dark:text-slate-400">
+                  {siteConfig.affiliation}
+                </p>
+              </div>
+            </div>
             <CVButtons showDownload={!!cvFile} />
           </div>
         </header>
@@ -61,7 +73,7 @@ export default function CVPage() {
 
         {/* PDF Embed */}
         {isPdf && (
-          <div className="w-full">
+          <div className="w-full cv-pdf-container">
             <div className="border-2 border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-slate-900">
               <iframe
                 src={cvFile}
@@ -75,7 +87,7 @@ export default function CVPage() {
         {/* Image Display */}
         {isImage && (
           <div className="w-full flex justify-center">
-            <div className="border-2 border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-slate-900 max-w-4xl">
+            <div className="border-2 border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-slate-900 max-w-4xl cv-image-container">
               <Image
                 src={cvFile}
                 alt="CV"

@@ -1,15 +1,38 @@
 import { Mail } from 'lucide-react'
+import Link from 'next/link'
 import siteConfig from '../site.config'
 
 export default function Footer() {
+  // Check if footer should be shown
+  if (siteConfig.footer?.show === false) {
+    return null
+  }
+
+  const footerText = siteConfig.footer?.text || `© ${new Date().getFullYear()} ${siteConfig.name}`
+  const showSocialLinks = siteConfig.footer?.showSocialLinks !== false
+  const customLinks = siteConfig.footer?.customLinks || []
+
   return (
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-black mt-auto transition-colors">
       <div className="mx-auto max-w-4xl px-4">
-        <div className="flex h-16 items-center justify-between">
-          <p className="text-sm text-gray-500 dark:text-slate-400">
-            © {new Date().getFullYear()} {siteConfig.name}
-          </p>
-          {siteConfig.social && (
+        <div className="flex h-16 items-center justify-between flex-wrap gap-4">
+          <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-slate-400">
+            <p>{footerText}</p>
+            {customLinks.length > 0 && (
+              <div className="flex gap-4">
+                {customLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.url}
+                    className="hover:text-gray-900 dark:hover:text-white transition-colors"
+                  >
+                    {link.text}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          {showSocialLinks && siteConfig.social && (
             <div className="flex gap-5">
               {siteConfig.social.github && (
                 <a
