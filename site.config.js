@@ -133,7 +133,7 @@ module.exports = {
   //   - columns: number of columns for grid mode (1, 2, 3, or 4)
   pages: {
     blog: {
-      mode: "list",          // "simple" | "grid" | "list"
+      mode: "grid",          // "simple" | "grid" | "list"
       itemsPerPage: 6,       // For grid/list mode pagination
       columns: 4            // For grid mode: 1, 2, 3, or 4 columns
     },
