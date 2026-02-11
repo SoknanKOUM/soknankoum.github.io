@@ -12,6 +12,40 @@ export default function Header({ allContent = [], searchOpen, setSearchOpen }) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isMac, setIsMac] = useState(false)
+  const [navigationItems, setNavigationItems] = useState([])
+
+  // Generate navigation items
+  useEffect(() => {
+    if (siteConfig.useDynamicNavigation) {
+      // Dynamic: generate from content folders
+      const contentFolders = Array.from(
+        new Set(allContent.map(item => item.page))
+      ).sort()
+
+      const dynamicNav = [
+        { title: "Home", path: "/", icon: "Home" },
+        ...contentFolders.map(folder => {
+          const iconMap = {
+            'cv': 'FileText',
+            'blog': 'BookOpen',
+            'projects': 'FolderGit2',
+            'publications': 'FileEdit',
+            'research': 'FlaskConical',
+            'teaching': 'GraduationCap'
+          }
+          return {
+            title: folder.charAt(0).toUpperCase() + folder.slice(1),
+            path: `/${folder}`,
+            icon: iconMap[folder.toLowerCase()] || 'FileText'
+          }
+        })
+      ]
+      setNavigationItems(dynamicNav)
+    } else {
+      // Manual: use config
+      setNavigationItems(siteConfig.navigation)
+    }
+  }, [allContent])
 
   // Detect Mac for keyboard shortcut display
   useEffect(() => {
@@ -49,7 +83,7 @@ export default function Header({ allContent = [], searchOpen, setSearchOpen }) {
 
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex gap-8">
-              {siteConfig.navigation.map((item) => (
+              {navigationItems.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
@@ -100,7 +134,7 @@ export default function Header({ allContent = [], searchOpen, setSearchOpen }) {
 
         {isOpen && (
           <nav className="md:hidden py-4 space-y-3 border-t dark:border-slate-800">
-            {siteConfig.navigation.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}

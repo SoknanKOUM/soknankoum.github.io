@@ -90,7 +90,12 @@ module.exports = {
     { name: "Eating Fish", icon: "Fish"}
   ],
 
-  // Add/remove navigation items here
+  // Navigation Configuration
+  // Set useDynamicNavigation to true to auto-generate navigation from content folders
+  // Set to false to use manual navigation items defined below
+  useDynamicNavigation: false,  // true = auto-generate from /content folders, false = use manual list below
+
+  // Manual navigation items (only used when useDynamicNavigation is false)
   // Optional: Add icon field with any Lucide React icon name
   navigation: [
     { title: "Home", path: "/", icon: "Home" },
@@ -123,6 +128,15 @@ module.exports = {
   cvConfig: {
     showDownloadButton: false,  // Set to false to hide the download button
     showPrintButton: false,     // Set to false to hide the print button
+
+    // CV Page Styling
+    style: {
+      headerStyle: "professional",  // "professional" | "minimal" | "creative"
+      showBadge: true,              // Show "Curriculum Vitae" badge
+      badgeColor: "gray",           // "gray" | "blue" | "green" | "purple"
+      showDivider: true,            // Show divider line under header
+      contentPadding: "tight",      // "tight" | "normal" | "relaxed"
+    }
   },
 
   // Page Display Configuration
@@ -136,6 +150,9 @@ module.exports = {
       mode: "grid",          // "simple" | "grid" | "list"
       itemsPerPage: 6,       // For grid/list mode pagination
       columns: 4            // For grid mode: 1, 2, 3, or 4 columns
+    },
+    cv: {
+      mode: "simple",          // "simple" | "grid" | "list"
     },
     // Add more pages here as needed:
     // pagename: { mode: "grid", itemsPerPage: 9, columns: 3 }

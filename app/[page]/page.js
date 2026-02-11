@@ -17,10 +17,13 @@ import { mdxComponents } from '../../components/MDXComponents'
 export async function generateMetadata({ params }) {
   const { page } = await params
   const singlePagePath = path.join(process.cwd(), 'content', `${page}.md`)
+  const folderPagePath = path.join(process.cwd(), 'content', page, `${page}.md`)
 
-  // For simple pages (single .md file)
-  if (fs.existsSync(singlePagePath)) {
-    const fileContents = fs.readFileSync(singlePagePath, 'utf8')
+  // For simple pages (single .md file or folder/page.md)
+  const simplePage = fs.existsSync(singlePagePath) ? singlePagePath : (fs.existsSync(folderPagePath) ? folderPagePath : null)
+
+  if (simplePage) {
+    const fileContents = fs.readFileSync(simplePage, 'utf8')
     const matter = require('gray-matter')
     const { data } = matter(fileContents)
 
@@ -108,26 +111,75 @@ export default async function DynamicPageRoute({ params }) {
 
   // Check if this is a simple page (single .md file) or collection page (folder with multiple .md files)
   const singlePagePath = path.join(process.cwd(), 'content', `${page}.md`)
+  const folderPagePath = path.join(process.cwd(), 'content', page, `${page}.md`)
 
-  // Simple page (e.g., content/about.md)
-  if (fs.existsSync(singlePagePath)) {
-    const fileContents = fs.readFileSync(singlePagePath, 'utf8')
+  // Simple page (e.g., content/about.md or content/cv/cv.md)
+  const simplePage = fs.existsSync(singlePagePath) ? singlePagePath : (fs.existsSync(folderPagePath) ? folderPagePath : null)
+
+  if (simplePage) {
+    const fileContents = fs.readFileSync(simplePage, 'utf8')
     const matter = require('gray-matter')
     const { data, content } = matter(fileContents)
 
+    // Check if this is the CV page
+    const isCV = page.toLowerCase() === 'cv'
+    const cvStyle = isCV ? siteConfig.cvConfig?.style : null
+
+    // CV-specific styling
+    const badgeColorClasses = {
+      gray: 'bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-white',
+      blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300',
+      green: 'bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-300',
+      purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-900 dark:text-purple-300'
+    }
+
+    const paddingClasses = {
+      tight: 'space-y-4',
+      normal: 'space-y-6',
+      relaxed: 'space-y-10'
+    }
+
     return (
-      <div className="w-full ">
-        <div className="space-y-10 py-4">
-          <header className="space-y-4">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-              {data.title || page.charAt(0).toUpperCase() + page.slice(1)}
-            </h1>
-            {data.description && (
-              <p className="text-lg text-gray-600 dark:text-slate-400">{data.description}</p>
+      <div className="w-full">
+        <div className={`${paddingClasses[cvStyle?.contentPadding || 'normal']} py-4 ${isCV ? 'max-w-5xl mx-auto' : ''}`}>
+          <header className="space-y-4 print:space-y-2">
+            {isCV && cvStyle?.showBadge !== false && (
+              <div className={`inline-block rounded-lg px-3 py-1 text-sm font-medium print:hidden ${badgeColorClasses[cvStyle?.badgeColor || 'gray']}`}>
+                Curriculum Vitae
+              </div>
+            )}
+
+            {isCV ? (
+              <div className="space-y-1.5">
+                <h1 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight print:text-3xl">
+                  {siteConfig.name}
+                </h1>
+                <div className="space-y-0.5">
+                  <p className="text-base font-medium text-gray-700 dark:text-slate-300">
+                    {siteConfig.role}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-slate-400">
+                    {siteConfig.affiliation}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <>
+                <h1 className="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                  {data.title || page.charAt(0).toUpperCase() + page.slice(1)}
+                </h1>
+                {data.description && (
+                  <p className="text-lg text-gray-600 dark:text-slate-400">{data.description}</p>
+                )}
+              </>
             )}
           </header>
 
-          <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
+          {isCV && cvStyle?.showDivider !== false && (
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-slate-700 to-transparent print:hidden"></div>
+          )}
+
+          <div className={`prose prose-gray dark:prose-invert max-w-none ${isCV ? 'cv-content' : ''}`}>
             <MDXRemote
               source={content}
               components={mdxComponents}
