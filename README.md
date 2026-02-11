@@ -200,19 +200,97 @@ A powerful search feature is built-in to help users find content across all page
 - Results are sorted by date (newest first)
 - Limited to 10 results for performance
 
-### Add CV PDF Download (Optional)
+### CV Configuration
 
-1. Place your CV PDF in `public/cv/` folder (e.g., `public/cv/resume.pdf`)
-2. Update `site.config.js`:
-   ```javascript
-   cvPdf: "/cv/resume.pdf"
-   ```
-3. The Download PDF button will appear on your CV page
+#### Dynamic Navigation
+
+Enable auto-generated navigation from content folders:
+
+```javascript
+// site.config.js
+useDynamicNavigation: true  // Auto-generate nav from /content folders
+```
+
+Or use manual navigation (default):
+
+```javascript
+useDynamicNavigation: false,
+navigation: [
+  { title: "Home", path: "/", icon: "Home" },
+  { title: "CV", path: "/cv", icon: "FileText" },
+  { title: "Blog", path: "/blog", icon: "BookOpen" }
+]
+```
+
+#### CV Display & Styling
+
+Configure CV page appearance in `site.config.js`:
+
+```javascript
+cvConfig: {
+  showDownloadButton: false,  // Show/hide download button
+  showPrintButton: false,     // Show/hide print button
+
+  // Professional CV styling options
+  style: {
+    showBadge: true,          // "Curriculum Vitae" badge
+    badgeColor: "gray",       // "gray" | "blue" | "green" | "purple"
+    showDivider: true,        // Divider line under header
+    contentPadding: "tight",  // "tight" | "normal" | "relaxed"
+  }
+}
+```
+
+#### CV File Options
+
+**Option 1: PDF File**
+```javascript
+cvFile: "/cv/resume.pdf"
+```
+Place PDF in `public/cv/` folder
+
+**Option 2: Image File**
+```javascript
+cvFile: "/cv/cv.png"
+```
+Place image in `public/cv/` folder
+
+**Option 3: Markdown** (Recommended for SEO)
+```javascript
+cvFile: null
+```
+Create `content/cv/cv.md` with this structure:
+```markdown
+---
+title: CV
+---
+
+## Education
+
+**PhD in Computer Science** | Stanford University
+*2020 - Present*
+
+- Research focus: Machine Learning
+- Advisor: Prof. Jane Doe
+- GPA: 4.0/4.0
+
+## Experience
+
+**Research Assistant** | Stanford AI Lab
+*September 2020 - Present*
+
+- Developing novel neural network architectures
+- Published 5 papers in top-tier conferences
+```
 
 **Features:**
-- Download PDF button (only shows if you set `cvPdf`)
-- Print button (works for the markdown content)
-- SEO-friendly markdown content + downloadable PDF option
+- Timeline dots and accent lines
+- Gradient section headers
+- Custom bullet points
+- Professional typography with kerning & ligatures
+- Optimized for print
+- Full dark mode support
+- SEO-friendly
 
 ### Create Custom Pages
 
