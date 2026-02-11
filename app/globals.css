@@ -491,51 +491,58 @@ body {
 
 /* Professional CV Styling */
 .cv-content {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #374151;
+}
+
+.dark .cv-content {
+  color: #d1d5db;
 }
 
 /* Section headings (## Education, ## Experience) */
 .cv-content h2 {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   color: #111827;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.375rem;
-  border-bottom: 2px solid #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.125rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid #e5e7eb;
+  position: relative;
+}
+
+.cv-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 3rem;
+  height: 1.5px;
+  background: #111827;
 }
 
 .dark .cv-content h2 {
-  color: #f1f5f9;
-  border-bottom-color: #f1f5f9;
+  color: #f9fafb;
+  border-bottom-color: #374151;
+}
+
+.dark .cv-content h2::after {
+  background: #f9fafb;
 }
 
 .cv-content h2:first-of-type {
   margin-top: 0;
 }
 
-/* Job titles/positions */
-.cv-content h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-top: 1.25rem;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
-}
-
-.dark .cv-content h3 {
-  color: #e5e7eb;
-}
-
-/* Regular paragraphs */
+/* Job titles/positions in paragraph */
 .cv-content p {
-  margin-top: 0.5rem;
+  margin-top: 0.375rem;
   margin-bottom: 0.5rem;
   color: #4b5563;
+  line-height: 1.6;
 }
 
 .dark .cv-content p {
@@ -545,64 +552,123 @@ body {
 /* Pattern: **Position** | Organization */
 .cv-content p strong {
   font-weight: 600;
+  font-size: 0.9375rem;
   color: #111827;
+  display: inline;
 }
 
 .dark .cv-content p strong {
-  color: #f9fafb;
+  color: #f3f4f6;
+}
+
+/* Pipe separator styling */
+.cv-content p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
 }
 
 /* Dates in italic (*2020 - Present*) */
-.cv-content p em,
 .cv-content em {
   color: #6b7280;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  margin-top: 0.25rem;
   display: block;
-  margin-top: 0.125rem;
 }
 
-.dark .cv-content p em,
 .dark .cv-content em {
-  color: #94a3b8;
+  color: #9ca3af;
 }
 
 /* Bullet lists */
 .cv-content ul {
-  margin-left: 1.25rem;
-  margin-top: 0.375rem;
-  margin-bottom: 0.875rem;
-  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+  list-style-type: none;
+  position: relative;
 }
 
 .cv-content li {
-  margin-top: 0.25rem;
-  padding-left: 0.25rem;
+  position: relative;
+  margin-top: 0.375rem;
+  padding-left: 1.125rem;
   color: #4b5563;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.cv-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #9ca3af;
+  font-weight: 600;
 }
 
 .dark .cv-content li {
   color: #9ca3af;
 }
 
-/* Tighter spacing after dates before bullets */
-.cv-content p:has(em) + ul {
-  margin-top: 0.375rem;
+.dark .cv-content li::before {
+  color: #6b7280;
+}
+
+/* Skills section - comma separated */
+.cv-content p:not(:has(strong)):not(:has(em)) {
+  display: block;
+  color: #6b7280;
+}
+
+.dark .cv-content p:not(:has(strong)):not(:has(em)) {
+  color: #9ca3af;
 }
 
 /* Numbered lists (publications) */
 .cv-content ol {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-left: 1.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
   list-style-type: decimal;
+  counter-reset: item;
 }
 
 .cv-content ol li {
-  margin-top: 0.375rem;
-  padding-left: 0.25rem;
+  margin-top: 0.625rem;
+  padding-left: 0.5rem;
+  line-height: 1.65;
+}
+
+.cv-content ol li::marker {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.dark .cv-content ol li::marker {
+  color: #9ca3af;
+}
+
+/* Links in CV */
+.cv-content a {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.cv-content a:hover {
+  border-bottom-color: #2563eb;
+}
+
+.dark .cv-content a {
+  color: #60a5fa;
+}
+
+.dark .cv-content a:hover {
+  border-bottom-color: #60a5fa;
 }
 
 /* R Markdown HTML content styling */
