@@ -24,7 +24,7 @@ module.exports = {
   // Place your image in public/images/ folder (e.g., public/images/profile.jpg)
   // Then set: profileImage: "/images/profile.jpg"
   // Leave as null to show initial letter instead
-  profileImage: "/images/timelines/itc.jpg",
+  profileImage: "/images/timelines/profile.jpg",
 
   // Current role and affiliation
   role: "Master's (M1) student in Applied Mathematics",
