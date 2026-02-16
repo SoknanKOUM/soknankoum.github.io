@@ -1,75 +1,141 @@
----
-title: CV
----
+<CVHeader
+  phone="+33 7 52 04 98 07"
+  email="koumsoknan096@gmail.com"
+  github="github.com/KS-Nan"
+  linkedin="linkedin.com/in/koum-soknan"
+/>
 
-## Education
+<CVSection title="About Me">
 
-**PhD in Computer Science** | Stanford University
-*2020 - Present*
+Master 1 (M1) student at École nationale supérieure d'informatique pour l'industrie et l'entreprise (ENSIIE) in applied mathematics.  
+Looking for a 3–4 month internship starting mid-May 2026.
 
-- Research focus: Machine Learning and Natural Language Processing
-- Advisor: Prof. Jane Doe
-- GPA: 4.0/4.0
+</CVSection>
 
-**Bachelor of Science in Computer Science** | MIT
-*2016 - 2020*
+<CVSection title="Education">
 
-- Graduated with Honors
-- Thesis: "Deep Learning Applications in Computer Vision"
-- GPA: 3.9/4.0
+<CVItem
+date="09/2025 – Present"
+location="Évry-Courcouronnes, France"
+title="École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise (ENSIIE)"
+subtitle="Master 1 (M1) in Applied Mathematics"
+>
+<li>Regularized Linear Regression (Supervised Learning)</li>
+<li>Data Analysis (Unsupervised Learning)</li>
+<li>Stochastic Process and Calculus</li>
+<li>Operations Research</li>
+<li>Advanced Programming (C++)</li>
+<li>Time Series</li>
+<li>Machine Learning</li>
+<li>Simulation Methods</li>
+<li>Analysis of Partial Differential Equations</li>
+</CVItem>
 
-## Experience
+<CVItem
+date="03/2022 – 2025"
+location="Phnom Penh, Cambodia"
+title="Institute of Technology of Cambodia (4 Years Completed)"
+subtitle="Engineering Degree in Applied Mathematics and Statistics"
+>
+<li>Machine Learning & Deep Learning</li>
+<li>Natural Language Processing</li>
+<li>Statistical Analysis & Database Systems</li>
+<li>Discrete Mathematics & Mathematical Modeling</li>
+<li>Data Structures & Algorithms</li>
+<li>Object-Oriented Programming</li>
+<li>Data Science Programming</li>
+<li>Optimization</li>
+</CVItem>
 
-**Research Assistant** | Stanford AI Lab
-*September 2020 - Present*
+</CVSection>
 
-- Developing novel neural network architectures for language understanding
-- Published 5 papers in top-tier conferences (NeurIPS, ICML, ACL)
-- Mentoring 3 undergraduate researchers
+<CVSection title="WORK EXPERIENCES">
 
-**Software Engineering Intern** | Google Research
-*Summer 2019*
+<CVItem
+date="05/2025 - 12/2025"
+location="ITC (ReDa Lab), Phnom Penh"
+title="President of LLM Club"
+>
+<li>Lead 30 student researchers across 6 AI research projects including chatbot development, sentiment analysis, LLM compression (LoRA), and Khmer NLP applications</li>
+<li>Coordinate with faculty advisors, and mentor junior researchers on ML engineering best practices</li>
+<li>Drive cutting-edge AI initiatives: AMS Chatbot, Khmer sentiment embeddings, and foundational LLM research</li>
+</CVItem>
 
-- Worked on the Google Translate team
-- Improved translation quality for low-resource languages by 15%
-- Implemented efficient caching mechanisms for model inference
+<CVItem
+date="06/2025 - 09/2025"
+location="MPTC (Technology Digital Team), Phnom Penh"
+title="AI Development intern"
+subtitle="Development of a Retrieval-Augmented Generation (RAG) Chatbot for Policy"
+>
+<li>Architected Retrieval-Augmented Generation (RAG) chatbot using LangChain and PostgreSQL vector database</li>
+<li>Built end-to-end NLP pipeline including PDF parsing, text splitting, vector indexing, and context-aware response generation</li>
+<li>Engineered automated document ingestion workflow, reducing manual processing time by 75%</li>
+</CVItem>
 
-**Teaching Assistant** | MIT
-*2018 - 2020*
+<CVItem
+date="10/2024 - 07/2025"
+location="ITC (ReDa Lab), Phnom Penh"
+title="Machine Learning Research Assistant"
+subtitle="Khmer Automatic Text Summarization using ML"
+>
+<li>Collected and aggregated sports-related data from multiple sources using web scraping techniques, cleaned and preprocessed raw data.</li>
+<li>Researched and evaluated various pre-trained machine learning models for data analysis and prediction tasks</li>
+<li>Developed and implemented machine learning models, integrating them with pre-trained models to enhance performance</li>
+</CVItem>
 
-- Courses: Introduction to Machine Learning, Algorithms
-- Held weekly office hours and graded assignments for 200+ students
-- Developed interactive tutorials and coding exercises
+<CVItem
+date="07/2024 - 09/2024"
+location="MPTC, Phnom Penh"
+title="Data Analysis Intern"
+subtitle="5G Auction Fee Analysis"
+>
+<li>Collected and preprocessed 2500 Khmer sports articles via web scraping, implementing custom tokenization for low-resource language processing.</li>
+<li>Evaluated and fine-tuned mT5 and mBERT for cross-lingual transfer learning on Southeast Asian languages</li>
+<li>Designed hybrid pipeline integrating custom attention mechanisms with pre-trained transformers for domain-specific summarization tasks</li>
+<li>Clean the data and using Power BI Tools create clear and informative visualizations, making the data easier to interpret and analyze, reducing data interpretation time by 80%</li>
+</CVItem>
 
-## Publications
+</CVSection>
 
-1. **Your Name**, Co-Author (2024). "Title of Your Paper." *Conference Name*. [Link]
-2. **Your Name**, Co-Author (2023). "Another Important Paper." *Journal Name*. [Link]
-3. Co-Author, **Your Name** (2022). "Research on Topic." *Conference*. [Link]
+<CVSection title="SKILLS">
+- **Programming languages:** Python, R, and C++
+- **ML Frameworks:** LangChain, PyTorch, scikit-learn, Transformers, pandas, NumPy, Matplotlib
+- **Database Management:** MySQL, Postgresql
+- **Data visualization tools:** PowerBI and SAP
+- **Microsoft Office:** Upper-Intermediate Level (Word/Excel/PowerPoint)
+- **Web Development:** HTML, CSS, JavaScript (Basic)
+- **Satellite Frequency Analysis**
+- **Data Entry:** the input data in Excel
 
-## Skills
+</CVSection>
 
-**Programming Languages**
-Python, JavaScript, C++, Java, R
+<CVSection title="LANGUAGES">
 
-**Frameworks & Tools**
-PyTorch, TensorFlow, React, Node.js, Docker, Git
+- **Khmer :** Mother Tongue  
+- **English :** Advance Level  
+- **French :** Intermediate Level
 
-**Languages**
-English (Native), Spanish (Fluent), Mandarin (Intermediate)
+</CVSection>
 
-## Awards & Honors
+<CVSection title="CERTIFICATIONS & TRAINING">
 
-- Best Paper Award, NeurIPS 2023
-- Stanford Graduate Fellowship, 2020-2024
-- Dean's List, MIT, 2016-2020
+UNESCO UNITWIN Data Science Camp - Advanced Level Business Analysis & Hackathon | Korean Ministry of Education| 2025  
+UNESCO UNITWIN Data Science Camp - Intermediate Level Machine Learning | Korean Ministry of Education | 2024  
+UNESCO UNITWIN Data Science Camp - Standard Level | Korean Ministry of Education | 2023
 
-## Projects
+</CVSection>
 
-**Open Source Contributions**
-- Core contributor to popular ML library (10k+ stars on GitHub)
-- Developed and maintained PyPI package with 50k+ downloads
+<CVSection title="ACHIEVEMENTS">
 
-**Personal Projects**
-- Built web app for [specific use case] - 5,000 active users
-- Created tutorial series on YouTube with 100k+ views
+CPE2025 Winner — (Télécom SudParis, Institut Mines-Télécom Business School, ENSIIE, IMT Starter): Designed SafeVeri, a regulatory-compliant AI KYC system detecting synthetic identity fraud for neobanks.
+
+</CVSection>
+
+<CVSection title="QUALITIES">
+
+- Collaborative  
+- Adaptive andFlexible  
+- Problem-solving  
+- AutonomousandSelf-motivated
+
+</CVSection>

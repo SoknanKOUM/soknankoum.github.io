@@ -1,12 +1,12 @@
 module.exports = {
   // Site metadata
-  name: "Chonky Cat",
-  title: "Chonky Site",
-  description: "Bonjour to my chonky website",
+  name: "Soknan KOUM",
+  title: "soknankoum",
+  description: "  Hello and welcome to Soknan Koum’s portfolio website",
 
   // SEO & Metadata
   siteUrl: "https://userwebsite.github.io", // Your site URL (for SEO)
-  author: "Chonky Cat", // Author name (for SEO)
+  author: "Soknan KOUM", // Author name (for SEO)
   keywords: ["portfolio", "blog", "machine learning", "AI"], // Keywords for SEO
 
   // Favicon & Icons (optional - customize if needed)
@@ -24,17 +24,17 @@ module.exports = {
   // Place your image in public/images/ folder (e.g., public/images/profile.jpg)
   // Then set: profileImage: "/images/profile.jpg"
   // Leave as null to show initial letter instead
-  profileImage: "/images/profile.png",
+  profileImage: "/images/timelines/itc.jpg",
 
   // Current role and affiliation
-  role: "Your Student Position",
-  affiliation: "Your University",
+  role: "Master's (M1) student in Applied Mathematics",
+  affiliation: "Université Paris-Saclay",
 
   // About section configuration
   aboutSection: {
     show: true,                      // Set to false to hide the About section
-    title: "Hello, I'm a Cool Cat 😼",                  // Customize the section heading (e.g., "Bonjour", "Hello", "Introduction")
-    content: `Your Introduction into Meow`     // Your introduction text (supports line breaks with \n\n)
+    title: "About ",                  // Customize the section heading (e.g., "Bonjour", "Hello", "Introduction")
+    content: `I am a Master1 (M1) student at École nationale supérieure d'informatique pour l'industrie et l'entreprise(ENSIIE) in applied mathematics. Currently seeking a 3 to 4 months internship beginning in May 2026 in the fields of Data Science, Machine Learning, Deep Learning, and Artificial Intelligence (AI).`     // Your introduction text (supports line breaks with \n\n)
   },
 
   // Contact section configuration
@@ -84,12 +84,12 @@ module.exports = {
   // Research interests or topics
   // You can use a string for plain text, or an object with { name, icon } to add lucide-react icon names
   interests: [
-    { name: "Machine Learning", icon: "Brain" },
-    { name: "Natural Language Processing", icon: "MessageSquare" },
-    { name: "AI Development", icon: "Code" },
-    { name: "Eating Fish", icon: "Fish"}
+      { name: "Data Science", icon: "Database" },
+      { name: "Machine Learning", icon: "Brain" },
+      { name: "Deep Learning", icon: "BrainCircuit" },
+      { name: "Artificial Intelligence", icon: "Bot" },
+      { name: "Statistical Analysis", icon: "ChartLine"}
   ],
-
   // Navigation Configuration
   // Set useDynamicNavigation to true to auto-generate navigation from content folders
   // Set to false to use manual navigation items defined below
@@ -99,16 +99,17 @@ module.exports = {
   // Optional: Add icon field with any Lucide React icon name
   navigation: [
     { title: "Home", path: "/", icon: "Home" },
+    {title: "About", path: "/about", icon: "User" },
     { title: "CV", path: "/cv", icon: "FileText" },
     { title: "Blog", path: "/blog", icon: "BookOpen" },
+  
   ],
 
   // Social links for footer
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    email: "your.email@example.com"
+    github: "https://github.com/SoknanKOUM",
+    linkedin: "https://www.linkedin.com/in/koum-soknan-402283298/",
+    email: "koumsoknan096@gmail.com"
   },
 
   // CV Display Options

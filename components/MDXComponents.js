@@ -1,7 +1,10 @@
 // Custom components for MDX rendering
 // These components add IDs to headings for Table of Contents linking
 import CodeBlock from './CodeBlock'
-
+import { Timeline, TimelineItem } from "./Timeline";
+import AboutHero from "./AboutHero";
+import EducationCard from "./EducationCard";
+import { CVHeader, CVSection, CVItem } from "./cv/CVComponents";
 function slugify(text) {
   return text
     .toLowerCase()
@@ -29,8 +32,17 @@ export const mdxComponents = {
     )
   },
   pre: ({ children, ...props }) => {
-    // Extract the code content for copying
     const code = children?.props?.children || ''
     return <CodeBlock {...props} raw={code}>{children}</CodeBlock>
-  }
+  },
+
+  // ⭐ ADD THESE LINES (IMPORTANT)
+AboutHero,
+EducationCard,
+Timeline,
+TimelineItem,
+CVHeader,
+CVSection,
+CVItem,
+
 }
