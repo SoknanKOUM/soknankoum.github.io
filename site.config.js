@@ -108,7 +108,7 @@ module.exports = {
   // Social links for footer
   social: {
     github: "https://github.com/SoknanKOUM",
-    linkedin: "https://www.linkedin.com/in/koum-soknan/",
+    linkedin: "https://www.linkedin.com/in/Soknan-KOUM/",
     email: "koumsoknan096@gmail.com"
   },
 
