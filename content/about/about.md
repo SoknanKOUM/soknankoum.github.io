@@ -48,7 +48,7 @@ Object-Oriented Programming, Optimization, Data Science Programming.
 <TimelineItem
   year="2025 – Present"
   title="Master M1 Applied Mathematics — ENSIIE (France)"
-  image="/images/timelines/nan.jpg"
+  image="/images/timelines/nan.JPG"
   align="right"
 >
 Studying Applied Mathematics and Artificial Intelligence at École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise, Évry-Courcouronnes.
@@ -67,7 +67,7 @@ Relevant coursework:
 <TimelineItem
   year="2022 – 2025"
   title="Engineering Degree — Institute of Technology of Cambodia"
-  image="/images/timelines/itc.jpg"
+  image="/images/timelines/itc.JPG"
   align="left"
 >
 Completed 4-year engineering program in Applied Mathematics & Statistics.
@@ -86,7 +86,7 @@ Relevant coursework:
 <TimelineItem
   year="2025"
   title="CPE2025 Winner — SafeVeri AI (France)"
-  image="/images/timelines/cpe.jpg"
+  image="/images/timelines/cpe.JPG"
   align="right"
 >
 Winner of Télécom SudParis & Institut Mines-Télécom entrepreneurship program.
@@ -97,7 +97,7 @@ Designed **SafeVeri**, a regulatory-compliant AI KYC system detecting synthetic 
 <TimelineItem
   year="2025"
   title="UNESCO UNITWIN Data Science Camp — Advanced Level"
-  image="/images/timelines/dscamp-advanced.jpg"
+  image="/images/timelines/dscamp-advanced.JPG"
   align="left"
 >
 Business Analysis & Hackathon program organized with the Korean Ministry of Education.
@@ -106,7 +106,7 @@ Business Analysis & Hackathon program organized with the Korean Ministry of Educ
 <TimelineItem
   year="2024"
   title="UNESCO UNITWIN Data Science Camp — Intermediate Level"
-  image="/images/timelines/dscamp-intermediate.jpg"
+  image="/images/timelines/dscamp-intermediate.JPG"
   align="right"
 >
 Focused on Machine Learning concepts and applied data projects.

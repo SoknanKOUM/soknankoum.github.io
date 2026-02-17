@@ -15,7 +15,7 @@ export default function AboutHero({ name, children }) {
           viewport={{ once:false }}
           className="absolute left-0 top-12 w-64 rounded-xl overflow-hidden shadow-xl"
         >
-          <Image src="/images/about/me1.jpg" alt="me" width={400} height={500}/>
+          <Image src="/images/about/me1.JPG" alt="me" width={400} height={500}/>
         </motion.div>
 
         <motion.div
@@ -25,7 +25,7 @@ export default function AboutHero({ name, children }) {
           viewport={{ once:false }}
           className="absolute left-44 top-0 w-56 rounded-xl overflow-hidden shadow-xl"
         >
-          <Image src="/images/about/Soknan.png" alt="me" width={400} height={500}/>
+          <Image src="/images/about/me2.JPG" alt="me" width={400} height={500}/>
         </motion.div>
 
         <motion.div
@@ -35,7 +35,7 @@ export default function AboutHero({ name, children }) {
           viewport={{ once:false }}
           className="absolute left-40 bottom-0 w-72 rounded-xl overflow-hidden shadow-xl"
         >
-          <Image src="/images/about/me3.jpg" alt="me" width={400} height={500}/>
+          <Image src="/images/about/me3.JPG" alt="me" width={400} height={500}/>
         </motion.div>
       </div>
 
