@@ -20,15 +20,10 @@ location="Évry-Courcouronnes, France"
 title="École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise (ENSIIE)"
 subtitle="Master 1 (M1) in Applied Mathematics"
 >
-<li>Regularized Linear Regression (Supervised Learning)</li>
-<li>Data Analysis (Unsupervised Learning)</li>
-<li>Stochastic Process and Calculus</li>
-<li>Operations Research</li>
-<li>Advanced Programming (C++)</li>
-<li>Time Series</li>
-<li>Machine Learning</li>
-<li>Simulation Methods</li>
-<li>Analysis of Partial Differential Equations</li>
+Relevant coursework:
+Regularized Linear Regression, Data Analysis, Stochastic Process, Calculus, Operations Research,
+Advanced Programming (C++), Time Series, Machine Learning, Simulation Methods,
+Analysis of Partial Differential Equations.
 </CVItem>
 
 <CVItem
@@ -37,14 +32,10 @@ location="Phnom Penh, Cambodia"
 title="Institute of Technology of Cambodia (4 Years Completed)"
 subtitle="Engineering Degree in Applied Mathematics and Statistics"
 >
-<li>Machine Learning & Deep Learning</li>
-<li>Natural Language Processing</li>
-<li>Statistical Analysis & Database Systems</li>
-<li>Discrete Mathematics & Mathematical Modeling</li>
-<li>Data Structures & Algorithms</li>
-<li>Object-Oriented Programming</li>
-<li>Data Science Programming</li>
-<li>Optimization</li>
+Relevant coursework:
+Machine Learning, Deep Learning, NLP, Statistical Analysis, Database Systems,
+Discrete Mathematics, Mathematical Modeling, Data Structures & Algorithms,
+Object-Oriented Programming, Optimization, Data Science Programming.
 </CVItem>
 
 </CVSection>
