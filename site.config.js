@@ -5,7 +5,7 @@ module.exports = {
   description: "  Hello and welcome to Soknan Koum’s portfolio website",
 
   // SEO & Metadata
-  siteUrl: "https://userwebsite.github.io", // Your site URL (for SEO)
+  siteUrl: "https://soknankoum.github.io", // Your site URL (for SEO)
   author: "Soknan KOUM", // Author name (for SEO)
   keywords: ["portfolio", "blog", "machine learning", "AI"], // Keywords for SEO
 
