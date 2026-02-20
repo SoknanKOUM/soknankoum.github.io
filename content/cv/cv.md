@@ -95,8 +95,6 @@ subtitle="5G Auction Fee Analysis"
 - **Data visualization tools:** PowerBI and SAP
 - **Microsoft Office:** Upper-Intermediate Level (Word/Excel/PowerPoint)
 - **Web Development:** HTML, CSS, JavaScript (Basic)
-- **Satellite Frequency Analysis**
-- **Data Entry:** the input data in Excel
 
 </CVSection>
 
