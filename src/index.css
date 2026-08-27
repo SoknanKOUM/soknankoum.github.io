@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme (default) */
+    --bg-base: #07060d;
+    --bg-elevated: #0b0a14;
+    --surface: #12101e;
+    --surface-muted: rgba(18, 16, 30, 0.5);
+    --surface-hover: rgba(18, 16, 30, 0.7);
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --border-faint: rgba(255, 255, 255,  0.05);
+    --border-hover: rgba(165, 130, 255, 0.45);
+    --grid-line: rgba(146, 105, 255, 0.16);
+    --dot-line: rgba(165, 130, 255, 0.14);
+    --glow: rgba(139, 92, 246, 0.3);
+    --navbar-bg: rgba(7, 6, 13, 0.8);
+    --overlay: rgba(7, 6, 13, 0.7);
+    --accent-text: #c3b0ff;
+    --accent-text-strong: #ede8ff;
+  }
+
+  :root.light {
+    --bg-base: #fdfff5;
+    --bg-elevated: #ffffff;
+    --surface: #ffffff;
+    --surface-muted: rgba(255, 255, 255, 0.7);
+    --surface-hover: rgba(255, 255, 255, 0.9);
+    --text-primary: #16121f;
+    --text-secondary: #4b4860;
+    --text-muted: #6b6880;
+    --border-subtle: rgba(22, 18, 31, 0.12);
+    --border-faint: rgba(22, 18, 31, 0.07);
+    --border-hover: rgba(124, 58, 237, 0.5);
+    --grid-line: rgba(109, 40, 217, 0.18);
+    --dot-line: rgba(124, 58, 237, 0.16);
+    --glow: rgba(139, 92, 246, 0.2);
+    --navbar-bg: rgba(253, 255, 245, 0.8);
+    --overlay: rgba(255, 255, 255, 0.7);
+    --accent-text: #7c3aed;
+    --accent-text-strong: #5b21b6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-secondary);
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  /* Site-wide grid background — fixed so it stays during scroll */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 100%);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.4);
+    color: var(--text-primary);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(165, 130, 255, 0.7), 0 0 0 4px var(--bg-base);
+    border-radius: 0.25rem;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  .bg-base { background-color: var(--bg-base); }
+  .bg-elevated { background-color: var(--bg-elevated); }
+  .bg-surface { background-color: var(--surface); }
+  .bg-surface-muted { background-color: var(--surface-muted); }
+  .bg-surface-hover { background-color: var(--surface-hover); }
+  .bg-navbar { background-color: var(--navbar-bg); }
+  .bg-overlay { background-color: var(--overlay); }
+  .bg-glow { background-color: var(--glow); }
+
+  .text-primary { color: var(--text-primary); }
+  .text-secondary { color: var(--text-secondary); }
+  .text-muted { color: var(--text-muted); }
+
+  .border-subtle { border-color: var(--border-subtle); }
+  .border-faint { border-color: var(--border-faint); }
+  .border-hover { border-color: var(--border-hover); }
+
+  .text-accent { color: var(--accent-text); }
+  .text-accent-strong { color: var(--accent-text-strong); }
+
+  .grid-texture {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .dot-texture {
+    background-image: radial-gradient(var(--dot-line) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-accent-100 to-accent-300 bg-clip-text text-transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

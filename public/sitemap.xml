@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Add a <url> entry here whenever you add a new project (src/data/projects.ts)
+  or blog post (src/data/blog.ts), so search engines can find it.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://soknankoum.github.io/</loc></url>
+  <url><loc>https://soknankoum.github.io/about</loc></url>
+  <url><loc>https://soknankoum.github.io/projects</loc></url>
+  <url><loc>https://soknankoum.github.io/projects/bank-marketing</loc></url>
+  <url><loc>https://soknankoum.github.io/projects/telecom-churn</loc></url>
+  <url><loc>https://soknankoum.github.io/projects/credit-score-analysis</loc></url>
+  <url><loc>https://soknankoum.github.io/projects/heat-equation-solver</loc></url>
+  <url><loc>https://soknankoum.github.io/blog</loc></url>
+  <url><loc>https://soknankoum.github.io/blog/khmer-news-summarization</loc></url>
+  <url><loc>https://soknankoum.github.io/contact</loc></url>
+</urlset>
