@@ -2,9 +2,9 @@ export const profile = {
   name: 'Soknan Koum',
   role: 'Data Scientist & Machine Learning Engineer',
   intro:
-    'I turn data and machine learning into tools that support real decisions, from clinical gait analysis to AI-powered public services.',
+    'I turn data and machine learning into tools that support real decisions.',
   longIntro:
-    'I am a Master’s student in Applied Mathematics and Data Science, currently seeking a 12-month work-study contract as a Data Scientist starting September 2026. My work spans machine learning, NLP and data visualization, applied to fields as varied as clinical biomechanics, public policy and low-resource language processing.',
+    'I am a Master’s student in Applied Mathematics and Data Science, currently seeking a 12-month work-study contract as a Data Scientist starting October 2026. My work spans machine learning, NLP and data visualization, applied to fields as varied as clinical biomechanics, public policy and low-resource language processing.',
   location: 'France',
   email: 'koumsoknan096@gmail.com',
   phone: '+33 7 52 04 98 07',
@@ -15,7 +15,7 @@ export const profile = {
   },
   cvUrl: '/resume/Soknan_KOUM.pdf',
   portrait:
-    '/images/about/Soknan.jpg',
+    '/images/timelines/itc.JPG',
 };
 
 export type NavItem = { label: string; to: string };
